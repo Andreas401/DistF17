@@ -27,11 +27,6 @@ public class StandardPlayer {
         Service service = Service.create(url, qname);
         MainInterface i = service.getPort(MainInterface.class);
         i.nulstil();
-        try {
-            i.hentOrdFraDr();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         
         Login l = new Login();
         
