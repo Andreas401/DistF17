@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.jws.WebService;
 import semesterprojektgalgeleg.MainInterface;
 
@@ -60,15 +62,12 @@ public class GameLogic implements MainInterface {
     
     
     public GameLogic() {
-         muligeOrd.add("marcuserenabe");
-        muligeOrd.add("thanhersej");
-        muligeOrd.add("danskkodning");
-        muligeOrd.add("banana");
-        muligeOrd.add("supermario");
-        muligeOrd.add("harrypotter");
-        muligeOrd.add("lamp");
-        muligeOrd.add("iphone"); 
-        nulstil();
+        try {
+            hentOrdFraDr();
+        } catch (Exception ex) {
+            Logger.getLogger(GameLogic.class.getName()).log(Level.SEVERE, null, ex);
+        }
+  
     }
     
     
@@ -81,6 +80,7 @@ public class GameLogic implements MainInterface {
        // ordet = muligeOrd.get(new Random().nextInt(muligeOrd.size()));
        ordet = muligeOrd.get(new Random().nextInt(muligeOrd.size()));
        opdaterSynligtOrd();
+
     }
     
     
