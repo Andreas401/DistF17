@@ -27,7 +27,6 @@ public class GameLogic implements MainInterface {
     private boolean spilletErTabt;
     
     
-    
     public ArrayList<String> getBrugteBogstaver() {
         return brugteBogstaver;
     }
