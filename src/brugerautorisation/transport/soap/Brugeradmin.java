@@ -1,5 +1,5 @@
-package server;
-
+package brugerautorisation.transport.soap;
+import brugerautorisation.data.Bruger;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 @WebService
@@ -24,9 +24,7 @@ public interface Brugeradmin
 	 * @param tekst Brødteksten - teksten 'Sendt fra xxxx ' bliver tilføjet  i mailen
 	 * @throws java.rmi.RemoteException
 	 */
-	@WebMethod void sendEmail(String brugernavn, String adgangskode, String emne, String tekst);
 
-	@WebMethod void sendGlemtAdgangskodeEmail(String brugernavn, String følgetekst);
 
 	/**
 	 * Giver mulighed for at gemme et ekstra felt for brugeren. Det kunne f.eks. være at en Galgeleg-backend ønskede at gemme hvor mange point brugeren har, til en highscoreliste
